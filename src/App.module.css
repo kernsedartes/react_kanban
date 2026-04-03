@@ -1,0 +1,65 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.app_layout {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+}
+
+.side_menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 72px;
+  height: 100vh;
+  background: #fff;
+  z-index: 10;
+  border-right: 1px solid #e5e7eb;
+}
+
+.main_container {
+  margin-left: 72px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #f7f8fa;
+  flex: 1;
+  min-width: 0;
+}
+
+.main_head {
+  height: 64px;
+  flex: 0 0 auto;
+  border-bottom: 1px solid #e5e7eb;
+  background: #fff;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.topnav {
+  display: flex;
+  align-items: center;
+}
+
+.boardTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.botnav {}
+
+.cols_container {
+  flex: 1 1 auto;
+  display: flex;
+  gap: 20px;
+  padding: 24px;
+  align-items: flex-start;
+  overflow-x: auto;
+  overflow-y: hidden;
+}

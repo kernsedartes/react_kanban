@@ -1,0 +1,62 @@
+.overlay {
+  position: fixed; inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 100; padding: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+.modal {
+  background: var(--bg-surface);
+  border-radius: 14px; width: 100%; max-width: 480px;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border);
+  animation: modalIn 0.2s ease;
+}
+@keyframes modalIn {
+  from { opacity: 0; transform: scale(0.96) translateY(10px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+.modalHeader {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 20px 20px 0;
+}
+.modalTitle { font-size: 16px; font-weight: 600; color: var(--text-primary); }
+.closeBtn {
+  display: flex; align-items: center; justify-content: center;
+  width: 32px; height: 32px; border: none; border-radius: 8px;
+  background: transparent; color: var(--text-placeholder); cursor: pointer;
+  transition: background 0.15s;
+}
+.closeBtn:hover { background: var(--bg-hover); color: var(--text-secondary); }
+.form { padding: 20px; display: flex; flex-direction: column; gap: 16px; }
+.field { display: flex; flex-direction: column; gap: 6px; }
+.label { font-size: 13px; font-weight: 500; color: var(--text-secondary); }
+.input, .textarea, .select {
+  width: 100%; padding: 10px 12px;
+  border: 1px solid var(--border); border-radius: 8px;
+  font-size: 14px; color: var(--text-primary);
+  background: var(--bg-surface);
+  outline: none; transition: border-color 0.15s;
+  font-family: inherit; box-sizing: border-box;
+}
+.input:focus, .textarea:focus, .select:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-light);
+}
+.textarea { resize: vertical; min-height: 80px; }
+.error { font-size: 12px; color: var(--danger); }
+.actions { display: flex; gap: 10px; justify-content: flex-end; padding-top: 4px; }
+.cancelBtn {
+  padding: 9px 18px; border: 1px solid var(--border); border-radius: 8px;
+  background: var(--bg-surface); font-size: 14px; font-weight: 500;
+  color: var(--text-secondary); cursor: pointer; font-family: inherit;
+  transition: background 0.15s;
+}
+.cancelBtn:hover { background: var(--bg-hover); }
+.submitBtn {
+  padding: 9px 18px; border: none; border-radius: 8px;
+  background: var(--accent); font-size: 14px; font-weight: 500;
+  color: #fff; cursor: pointer; font-family: inherit;
+  transition: background 0.15s;
+}
+.submitBtn:hover { background: var(--accent-hover); }

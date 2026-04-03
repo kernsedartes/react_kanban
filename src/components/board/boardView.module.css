@@ -1,0 +1,10 @@
+/* Этот враппер — прямой flex-child внутри .content из boardLayout.
+   Он должен занять всё доступное пространство и раздать его колонкам. */
+.columnsWrapper {
+  display: flex;
+  gap: 20px;
+  flex: 1 1 auto;
+  width: 100%;
+  align-items: flex-start;
+  min-width: 0;
+}
